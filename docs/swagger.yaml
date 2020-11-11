@@ -1,0 +1,28 @@
+basePath: /v1
+definitions:
+  models.Status:
+    properties:
+      message:
+        type: string
+    type: object
+host: https://api.demo.com
+info:
+  contact: {}
+  description: This is a demo API
+  title: Demo API
+  version: "1.0"
+paths:
+  /v1/ping:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Status'
+        "400": {}
+      summary: Returns a 200
+swagger: "2.0"
